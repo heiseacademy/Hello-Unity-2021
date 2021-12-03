@@ -10,7 +10,9 @@ public class HelloLichtschranke : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         kamera1.enabled = false;
+        kamera1.GetComponent<AudioListener>().enabled = false;
         kamera2.enabled = true;
+        kamera2.GetComponent<AudioListener>().enabled = true;
     }
 
     private void OnTriggerExit(Collider other)
